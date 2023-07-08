@@ -1,0 +1,51 @@
+{
+    "manifest_version": 3,
+    "name": "Volume Booster",
+    "version": "1.0.1",
+    "description": "Volume Booster will boost video and music volume! Control and manage volume and sound with this extension.",
+    "default_locale": "en",
+    "permissions": ["activeTab", "tabCapture", "tabs"],
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    
+    "icons": {
+        "16": "icons/volumeboostericon16.png",
+        "64": "icons/volumeboostericon64.png",
+        "128": "icons/volumeboostericon128.png"
+    },
+  
+
+    "action": {
+        "default_icon": {
+            "16": "icons/volumeboostericon16.png",
+            "64": "icons/volumeboostericon64.png",
+            "128": "icons/volumeboostericon128.png"
+        },
+        "default_title": "Volume Booster",
+        "default_popup": "popup.html"
+    },
+
+
+    "background": {
+        "service_worker": "background.js"
+    },
+
+    "web_accessible_resources": [
+        {
+            "resources": [
+            "assets/x.png",
+            "assets/x.png",
+            "assets/x.png",
+            "assets/x.png"
+        ] 
+        }
+    ],
+
+    "author": "developer@example.com",  
+
+    "homepage_url": "https://volumeamplifer.com/"
+}
